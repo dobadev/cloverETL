@@ -2,6 +2,62 @@
                           CloverETL Engine - HISTORY of RELEASES
 *******************************************************************************
 
+
+REL 3-3-0
+---------
+
+- UniversalDataReader does not open as many connections to SFTP
+- Partition correctly uses charset attribute
+- escape values in defaultProperties
+- input port reading in stream mode - process data progressibely without waiting for EOF
+
+REL 3-3-0-M3
+------------
+* DBFDataWriter component
+* USE_DIRECT_MEMORY in default properties – ability to turn off usage of direct memory and use heap instead (lower performance, better manageability)
+* Tempspace Management - components were updated to use centralised tempspace management
+	- BACKWARDS INCOMPATIBILITY
+		- components cannot specify their own tmp paths (SortWithinGroups, ExtSort, HTTPConnector, XLSDataWriter, XMLWriter)
+		- components cannot prevent deletion of their temporary files (SystemExecute - Delete tmp batch file)
+- XMLExtract - ability to read element/attribute names
+- MD5Sum, SHA1Sum, SHA256Sum aggregation functions
+- MSAccess specific/connection
+- CTL functions to access environment variables, Java properties, graph parameters
+- dateDiff() CTL function implementation fixed - provides correct results (BACKWARDS INCOMPATIBILITY)
+- Upgraded bundled Oracle JDBC driver to version 11.2.0.3.0
+
+
+REL 3-3-0-M2
+------------
+* Support for list and map fields in metadata (container types)
+* CTL2 change in assignment operator '=' (now it assigns by value, not reference)
+- Webservice client: added "Timeout" attribute + ability to print SOAP request/response in DEBUG mode
+
+
+REL 3-3-0-M1
+------------
++ Introducing MS Access and Generic ODBC
+- Improved log messages in readers and Aggregate
+- CTL2: fixed datediff() function to work with milliseconds
+- FastSort: Fixed rare synchronization problem during long runs causing a deadlock
+- UniversalDataReader: fixed buffer size problems when verbose mode is on with big records
+- UniversalDataReader/Writer, ComplexDataReader and ParallelReader: Explicit Quoted string and Quote character have now higher priority than setting these values in metadata (i.e. can now be properly overridden in component setting)
+- Analyzedb.bat: Paths to Clover-bundled JDBC drivers are now properly set
+- UniversalDataWriter and partitioned output – locking of file pattern is now more fine grained so that multiple graphs can run at the same time
+
+
+REL 3-2-1
+---------
+- WebServiceClient name space support fixed
+- XMLExtract mapping dialog not handling recursive XSDs correctly fixed
+
+
+REL 3-2-0
+---------
+* Introduction of dynamic edge buffers
++ Field Labels
+
+
 REL 3-1-2
 ---------
 

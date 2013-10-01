@@ -1,6 +1,6 @@
 <plugin
    id="org.jetel.engine"
-   version="3.2.1"
+   version="3.3.0"
    provider-name="Javlin a.s.">
 
 	<extension point-id="dictionaryType">
@@ -56,6 +56,16 @@
 	<extension point-id="dictionaryType">
 		<parameter id="type" value="byte"/>
 		<parameter id="className" value="org.jetel.graph.dictionary.ByteDictionaryType"/>
+	</extension>
+	
+	<extension point-id="dictionaryType">
+		<parameter id="type" value="list"/>
+		<parameter id="className" value="org.jetel.graph.dictionary.ListDictionaryType"/>
+	</extension>
+	
+	<extension point-id="dictionaryType">
+		<parameter id="type" value="map"/>
+		<parameter id="className" value="org.jetel.graph.dictionary.MapDictionaryType"/>
 	</extension>
 	
 	<extension point-id="tlCompiler">

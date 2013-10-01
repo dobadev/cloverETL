@@ -1,10 +1,10 @@
-<plugin id="org.jetel.bulkloader" version="3.2.1">
+<plugin id="org.jetel.bulkloader" version="3.3.0">
 	<runtime>
 		<library path="cloveretl.bulkloader.jar"/>
 		<library path="lib/infobright-core-3.0-remote.jar"/>
 	</runtime>
 	
-	<requires engine-version="3.2.1">
+	<requires engine-version="3.3.0">
 		<import plugin-id="org.jetel.connection"/>
 		<import plugin-id="org.jetel.component"/>
 	</requires>

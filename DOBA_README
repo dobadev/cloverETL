@@ -1,0 +1,7 @@
+Note: When you update Clover, you need to set the log output to go
+to STDERR, rather than STDOUT.  You do this by adding:
+
+log4j.appender.A1.target=System.err
+log4j.appender.A2.target=System.err
+
+to the log4j.properties file within the lib/cloveretl.engine.jar archive.
